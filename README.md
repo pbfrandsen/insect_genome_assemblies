@@ -10,3 +10,4 @@ These scripts were used to download and organize insect genome assembly metadata
 
 `scrape_assembly_info.py` is a webscraping script that uses [beautiful soup](https://pypi.org/project/beautifulsoup4/) to find metadata that isn't included in the datasets tool (sequencing coverage, sequencing technology, assembler used).
 
+You can run `scrape_assembly_info.py` over a list of accession numbers in a text file with, e.g. ```for i in `cat accessions.txt`; do python scrape_assembly_info.py; done``` The resulting data will be written to a file called `assembly_type.csv`.
