@@ -1,4 +1,4 @@
-# insect_genome_assemblies
+# Insect genome assembly stats
 scripts used to download and analyze insect assemblies from GenBank
 These scripts were used to download and organize insect genome assembly metadata from NCBI.
 
