@@ -11,3 +11,20 @@ These scripts were used to download and organize insect genome assembly metadata
 `scrape_assembly_info.py` is a webscraping script that uses [beautiful soup](https://pypi.org/project/beautifulsoup4/) to find metadata that isn't included in the datasets tool (sequencing coverage, sequencing technology, assembler used).
 
 You can run `scrape_assembly_info.py` over a list of accession numbers in a text file with, e.g. ```for i in `cat accessions.txt`; do python scrape_assembly_info.py $i; done``` The resulting data will be written to a file called `assembly_type.csv`.
+
+#### Figure 2 a,b scripts
+**Fig2a_data.txt**
+
+A modified of the big data frame I used for the plot in Fig. 2a. This file is read by the `Fig_2a_b_plotter.R` script.
+
+**Fig2b_parse.py**
+
+A python script that parses the above file and ouputs a subset of the data formatted for plotting the BUSCO plot in 2b.
+
+**Fig2b_data.txt**
+
+The file produced by running the above python script. This file is read by the `Fig_2a_b_plotter.R` script to produce plot 2b (BUSCOs).
+
+**Fig_2a_b_plotter.R**
+
+The R script that plots 2a using `Fig2a_data.txt` as input, and 2b using `Fig2b_data.txt` as input.
